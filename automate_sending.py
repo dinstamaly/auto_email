@@ -55,8 +55,8 @@ def send_daily_reports():
         send_email(recipient, subject, body, attachment)
 
 
-# schedule.every().day.at("08:00").do(send_daily_reports)
-schedule.every(300).seconds.do(send_daily_reports)
+schedule.every().day.at("09:00").do(send_daily_reports)
+# schedule.every(300).seconds.do(send_daily_reports)
 
 while True:
     schedule.run_pending()
